@@ -1,92 +1,94 @@
 <!DOCTYPE html>
 <html>
-  <title>Simple Sign up from</title>
   <head>
+    <title>Registration with facebook, twitter and google</title>
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
     <style>
       html, body {
       display: flex;
       justify-content: center;
+      align-items: center;
+      height: 100%;
+      }
+      body, div, p { 
+      padding: 0;
+      margin: 0;
+      outline: none;
       font-family: Roboto, Arial, sans-serif;
-      font-size: 15px;
+      font-size: 16px;
+      color: #666;
       }
-      form {
-      border: 5px solid #f1f1f1;
-      }
-      input[type=text], input[type=password] {
-      width: 100%;
-      padding: 16px 8px;
-      margin: 8px 0;
-      display: inline-block;
-      border: 1px solid #ccc;
-      box-sizing: border-box;
-      }
-      .icon {
-      font-size: 110px;
-      display: flex;
-      justify-content: center;
-      color: #4286f4;
-      }
-      button {
-      background-color: #4286f4;
-      color: white;
-      padding: 14px 0;
-      margin: 10px 0;
-      border: none;
-      cursor: grab;
-      width: 48%;
+      body {
+      background: url("/uploads/media/default/0001/01/49bff73f282c2c21f3341f1fe457fe35337b1792.jpeg") no-repeat center;
+      background-size:cover;
       }
       h1 {
-      text-align:center;
-      fone-size:18;
+      margin: 0 0 10px 0;
+      font-weight: 400;
       }
-      button:hover {
-      opacity: 0.8;
+      .main-block {
+      display: flex;
+      width: 90%;
+      padding: 10px 0; 
+      border-radius: 5px;
+      box-shadow: 1px 1px 8px 0px #666; 
+      background: #fff;
       }
-      .formcontainer {
-      text-align: center;
-      margin: 24px 50px 12px;
+      .block-item {
+      width: 50%;
+      padding: 20px; 
       }
-      .container {
-      padding: 16px 0;
-      text-align:left;
+      .block-item.right {
+      border-left: 1px solid #aaa;
       }
-      span.psw {
-      float: right;
-      padding-top: 0;
-      padding-right: 15px;
+      i {
+      width: 50px;
+      font-size: 24px;
       }
-      /* Change styles for span on extra small screens */
-      @media screen and (max-width: 300px) {
-      span.psw {
-      display: block;
-      float: none;
+      .btn {
+      display: flex;
+      align-items: center;
+      width: 100%;
+      height: 40px;
+      margin: 10px 0;
+      outline: none;
+      border: 0;
+      border-radius: 5px;
+      box-shadow: 2px 2px 2px #666;
+      background: #e8e8e8;
+      color: #fff;
+      cursor: pointer;
+      }
+      .btn:hover {
+      transform: scale(1.03);
+      }
+      .btn span {
+      font-size: 16px;
+      }
+      .facebook {
+      background: #3a589e;
+      }
+      .twitter {
+      background: #429cd6;
+      }
+      .google{
+      background: #d34836;
       }
     </style>
   </head>
   <body>
-    <form action="/action_page.php">
-      <h1>SIGN UP</h1>
-      <div class="icon">
-        <i class="fas fa-user-circle"></i>
+    <div class="main-block">
+      <div class="block-item left">
+        <h1>Sign up with:</h1>
+        <p><small>W3docs provides free learning materials for programming languages like HTML, CSS, Java Script, PHP etc.</small>
+        </p>
       </div>
-      <div class="formcontainer">
-      <div class="container">
-        <label for="uname"><strong>Username</strong></label>
-        <input type="text" placeholder="Enter Username" name="uname" required>
-        <label for="mail"><strong>E-mail</strong></label>
-        <input type="text" placeholder="Enter E-mail" name="mail" required>
-        <label for="psw"><strong>Password</strong></label>
-        <input type="password" placeholder="Enter Password" name="psw" required>
+      <div class="block-item right">
+        <button class="btn facebook" data-provider="facebook"><i class="fab fa-facebook-f"></i><span>Facebook</span></button>
+        <button class="btn twitter" data-provider="twitter"><i class="fab fa-twitter"></i><span>Twitter</span></button>
+        <button class="btn google" data-provider="google"><i class="fab fa-google"></i><span>Google</span></button>
       </div>
-      <button type="submit"><strong>SIGN UP</strong></button>
-      <div class="container" style="background-color: #eee">
-        <label style="padding-left: 15px">
-        <input type="checkbox"  checked="checked" name="remember"> Remember me
-        </label>
-        <span class="psw"><a href="#">Forgot password?</a></span>
-      </div>
-    </form>
+    </div>
   </body>
 </html>
